@@ -1,7 +1,7 @@
 package guru.springframework.didemo.controllers;
 
-import guru.springframework.services.GreetingService;
-import guru.springframework.services.GreetingServiceImpl;
+import guru.springframework.didemo.services.GreetingService;
+import guru.springframework.didemo.services.GreetingServiceImpl;
 
 /**
  * Created by jt on 5/24/17.
