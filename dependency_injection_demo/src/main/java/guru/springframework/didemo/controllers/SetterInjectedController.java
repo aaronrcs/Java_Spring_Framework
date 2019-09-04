@@ -2,10 +2,13 @@ package guru.springframework.didemo.controllers;
 
 import guru.springframework.didemo.services.GreetingService;
 import guru.springframework.didemo.services.GreetingServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 /**
  * Created by jt on 5/24/17.
  */
+@Controller
 public class SetterInjectedController {
     private GreetingService greetingService;
 
@@ -13,6 +16,7 @@ public class SetterInjectedController {
         return greetingService.sayGreeting();
     }
 
+    @Autowired
     public void setGreetingService(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
