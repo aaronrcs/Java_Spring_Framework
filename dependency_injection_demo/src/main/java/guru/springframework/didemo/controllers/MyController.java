@@ -1,4 +1,4 @@
-package guru.springframework.controllers;
+package guru.springframework.didemo.controllers;
 
 import org.springframework.stereotype.Controller;
 
