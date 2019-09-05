@@ -4,13 +4,12 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-//Using @Service will tell the Spring context to bring this class as a Spring Bean
 @Service
+@Profile("es")
 @Primary
-@Profile("eng")
-public class PrimaryGreetingService implements GreetingService {
+public class PrimarySpanishGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello from Primary service";
+        return "Servicio de saludo Primario";
     }
 }
