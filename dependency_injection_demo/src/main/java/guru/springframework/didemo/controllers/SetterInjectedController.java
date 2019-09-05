@@ -3,6 +3,7 @@ package guru.springframework.didemo.controllers;
 import guru.springframework.didemo.services.GreetingService;
 import guru.springframework.didemo.services.GreetingServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -16,8 +17,10 @@ public class SetterInjectedController {
         return greetingService.sayGreeting();
     }
 
+    //Using @Qualifier to directly inject the bean onto the unimplemented function inside GreetingService Interface
+    //getterGreetingService is injecting the sayGreeting method onto that interface
     @Autowired
-    public void setGreetingService(GreetingService greetingService) {
+    public void setGreetingService(@Qualifier("getterGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 }
